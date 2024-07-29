@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #A8DADC;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -22,6 +24,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s;
 }
 
 .choice:hover {
@@ -42,6 +45,7 @@ img {
     align-items: center;
     gap: 3rem;
     margin-top: 5rem;
+    flex-wrap: wrap;
 }
 
 .score-board {
@@ -51,6 +55,7 @@ img {
     font-size: 2rem;
     margin-top: 3rem;
     gap: 5rem;
+    flex-wrap: wrap;
 }
 
 #user-score,
@@ -69,4 +74,74 @@ img {
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .choices {
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .score-board {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    #user-score,
+    #computer-score {
+        font-size: 3rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .choices {
+        margin-top: 2rem;
+    }
+
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .score-board {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    #user-score,
+    #computer-score {
+        font-size: 2rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
 }
